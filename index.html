@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây Dựng Lớp Mô Tả Temperature</title>
+</head>
+<body>
+<script>
+    /*    let Temperature = function (c) {
+            this.c = c;
+
+            this.getC = function () {
+                return c;
+            }
+
+            this.getCToF = function () {
+                return (9 * c) / 5 + 32;
+            }
+
+            this.getCToK = function () {
+                return c + 273.15;
+            }
+        };
+
+        let c = parseInt(prompt("Nhập độ C"));
+        let temperature = new Temperature(c);
+        let cToF = temperature.getCToF();
+        let cToK = temperature.getCToK();
+
+        alert(c + " Độ C = " + cToF + " Độ F");
+        alert(c + " Độ C = " + cToK + " Độ K");*/
+
+    class Temperature {
+        c;
+
+        constructor(c) {
+            this.c = c;
+        }
+
+        getCToF(c) {
+            return (9 * c) / 5 + 32;
+        }
+
+        getCToK(c) {
+            return c + 273.15;
+        }
+
+    }
+
+    let c = parseInt(prompt("Mời bạn nhập độ c"));
+    let temperature = new Temperature();
+    let cToF = temperature.getCToF(c);
+    let cToK = temperature.getCToK(c);
+
+    alert(c + " Độ C = " + cToF + " Độ F");
+    alert(c + " Độ C = " + cToK + " Độ K");
+
+</script>
+</body>
+</html>
